@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profil Joueur | Africa Talent Football</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f5f3;
+    color: #17221b;
+}
+
+header {
+    background: #071f17;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #24c77a;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #073c2b, #0b6043);
+    color: white;
+    padding: 45px 7%;
+}
+
+.player-header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.player-photo {
+    width: 190px;
+    height: 220px;
+    background: #dce8e2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    color: #073c2b;
+}
+
+.player-main {
+    flex: 1;
+    min-width: 260px;
+}
+
+.player-main h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.position {
+    color: #24c77a;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.basic-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.info {
+    background: rgba(255,255,255,0.12);
+    padding: 9px 13px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.rating {
+    width: 125px;
+    height: 125px;
+    border: 5px solid #24c77a;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating strong {
+    font-size: 38px;
+}
+
+.rating span {
+    font-size: 12px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 20px;
+}
+
+.section {
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+
+.attributes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 35px;
+}
+
+.attribute {
+    margin-bottom: 5px;
+}
+
+.attribute-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.bar {
+    height: 9px;
+    background: #e1e7e3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #0b6043;
+    border-radius: 10px;
+}
+
+.score {
+    font-weight: bold;
+    color: #0b6043;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    background: #f3f7f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 27px;
+    color: #073c2b;
+    margin-bottom: 5px;
+}
+
+.stat span {
+    color: #68756e;
+    font-size: 13px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.profile-item {
+    padding: 14px;
+    background: #f5f7f6;
+    border-radius: 7px;
+}
+
+.profile-item span {
+    display: block;
+    color: #69766f;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.video {
+    background: #101914;
+    height: 330px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.video-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #24c77a;
+    color: #071f17;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact {
+    background: #073c2b;
+    color: white;
+    text-align: center;
+}
+
+.contact p {
+    margin: 12px auto 22px;
+    max-width: 600px;
+    color: #dbece5;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #24c77a;
+    color: #071f17;
+    padding: 14px 24px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #04150f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    color: #9eafa7;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+@media(max-width: 700px) {
+
+    .player-main h1 {
+        font-size: 30px;
+    }
+
+    .player-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .basic-info {
+        justify-content: center;
+    }
+
+    .attributes {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rating {
+        margin: auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+AFRICA <span>TALENT</span> FOOTBALL
+</div>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="index.html#players">Talents</a>
+<a href="#">Recruteurs</a>
+<a href="#">Clubs</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="player-header">
+
+<div class="player-photo">
+⚽
+</div>
+
+<div class="player-main">
+
+<h1>PLAYER NAME</h1>
+
+<div class="position">
+MILIEU DÉFENSIF
+</div>
+
+<div class="basic-info">
+
+<div class="info">🇨🇮 Côte d'Ivoire</div>
+
+<div class="info">🎂 18 ans</div>
+
+<div class="info">🦶 Pied droit</div>
+
+<div class="info">📏 1,82 m</div>
+
+<div class="info">🏟️ Club / Académie</div>
+
+</div>
+
+</div>
+
+
+<div class="rating">
+
+<strong>84</strong>
+
+<span>ATH RATING</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="section">
+
+<h2>👤 Informations du joueur</h2>
+
+<div class="profile-grid">
+
+<div class="profile-item">
+<span>Nom complet</span>
+<strong>PLAYER NAME</strong>
+</div>
+
+<div class="profile-item">
+<span>Date de naissance</span>
+<strong>00 / 00 / 2008</strong>
+</div>
+
+<div class="profile-item">
+<span>Nationalité</span>
+<strong>Côte d'Ivoire 🇨🇮</strong>
+</div>
+
+<div class="profile-item">
+<span>Poste principal</span>
+<strong>Milieu défensif</strong>
+</div>
+
+<div class="profile-item">
+<span>Positions secondaires</span>
+<strong>Milieu central</strong>
+</div>
+
+<div class="profile-item">
+<span>Pied fort</span>
+<strong>Droit</strong>
+</div>
+
+<div class="profile-item">
+<span>Taille</span>
+<strong>1,82 m</strong>
+</div>
+
+<div class="profile-item">
+<span>Club actuel</span>
+<strong>Club / Académie</strong>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>⚽ Attributs techniques</h2>
+
+<div class="attributes">
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Contrôle de balle</span>
+<span class="score">86</span>
+</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Dribble</span>
+<span class="score">88</span>
+</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Passe courte</span>
+<span class="score">87</span>
+</div>
+<div class="bar"><div class="fill" style="width:87%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Passe longue</span>
+<span class="score">81</span>
+</div>
+<div class="bar"><div class="fill" style="width:81%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Technique</span>
+<span class="score">89</span>
+</div>
+<div class="bar"><div class="fill" style="width:89%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Première touche</span>
+<span class="score">87</span>
+</div>
+<div class="bar"><div class="fill" style="width:87%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Finition</span>
+<span class="score">72</span>
+</div>
+<div class="bar"><div class="fill" style="width:72%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Centres</span>
+<span class="score">78</span>
+</div>
+<div class="bar"><div class="fill" style="width:78%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🏃 Attributs physiques</h2>
+
+<div class="attributes">
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Vitesse</span>
+<span class="score">91</span>
+</div>
+<div class="bar"><div class="fill" style="width:91%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Accélération</span>
+<span class="score">93</span>
+</div>
+<div class="bar"><div class="fill" style="width:93%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Endurance</span>
+<span class="score">88</span>
+</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Puissance</span>
+<span class="score">82</span>
+</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Agilité</span>
+<span class="score">89</span>
+</div>
+<div class="bar"><div class="fill" style="width:89%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Équilibre</span>
+<span class="score">86</span>
+</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧠 Attributs tactiques & mentaux</h2>
+
+<div class="attributes">
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Vision du jeu</span>
+<span class="score">85</span>
+</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Intelligence de jeu</span>
+<span class="score">88</span>
+</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Prise de décision</span>
+<span class="score">84</span>
+</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Anticipation</span>
+<span class="score">86</span>
+</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Concentration</span>
+<span class="score">83</span>
+</div>
+<div class="bar"><div class="fill" style="width:83%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Jeu sous pression</span>
+<span class="score">87</span>
+</div>
+<div class="bar"><div class="fill" style="width:87%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🛡️ Attributs défensifs</h2>
+
+<div class="attributes">
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Tacles</span>
+<span class="score">85</span>
+</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Interceptions</span>
+<span class="score">89</span>
+</div>
+<div class="bar"><div class="fill" style="width:89%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Marquage</span>
+<span class="score">84</span>
+</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Duels</span>
+<span class="score">86</span>
+</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Jeu aérien</span>
+<span class="score">78</span>
+</div>
+<div class="bar"><div class="fill" style="width:78%"></div></div>
+</div>
+
+<div class="attribute">
+<div class="attribute-top">
+<span>Récupération</span>
+<span class="score">90</span>
+</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>📊 Statistiques de saison</h2>
+
+<div class="stats">
+
+<div class="stat">
+<strong>24</strong>
+<span>Matchs</span>
+</div>
+
+<div class="stat">
+<strong>1 920</strong>
+<span>Minutes</span>
+</div>
+
+<div class="stat">
+<strong>3</strong>
+<span>Buts</span>
+</div>
+
+<div class="stat">
+<strong>7</strong>
+<span>Passes décisives</span>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🎥 Vidéo du joueur</h2>
+
+<div class="video">
+
+<div>
+
+<h3>Highlights & Match Analysis</h3>
+
+<a href="#" class="video-button">
+▶️ Voir la vidéo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section contact">
+
+<h2>🔎 Intéressé par ce joueur ?</h2>
+
+<p>
+Les clubs, scouts et recruteurs peuvent demander
+des informations complémentaires sur ce profil.
+</p>
+
+<a href="mailto:contact@africatalentfootball.com"
+class="contact-button">
+Contacter Africa Talent Football
+</a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<h3>AFRICA TALENT FOOTBALL</h3>
+
+<p>
+Professional African Football Talent Scouting Platform
+</p>
+
+<p>
+© 2026 Africa Talent Football. Tous droits réservés.
+</p>
+
+</footer>
+
+</body>
+</html>
