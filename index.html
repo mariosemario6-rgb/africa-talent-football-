@@ -1,242 +1,718 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Africa Talent Football</title>
+<title>Africa Talent Football | Football Talent Scouting</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7f5;
-            color: #17221b;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #0b3d2e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #17221b;
+}
 
-        header h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
+header {
+    background: #071f17;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        header p {
-            font-size: 15px;
-        }
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
 
-        nav {
-            background: #092d23;
-            padding: 12px;
-            text-align: center;
-        }
+.logo span {
+    color: #24c77a;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-        }
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-        .hero {
-            padding: 55px 20px;
-            text-align: center;
-            background: white;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
 
-        .hero h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
+.nav-button {
+    background: #24c77a;
+    color: #071f17;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.6;
-        }
+.hero {
+    background: linear-gradient(135deg, #073c2b, #0b6043);
+    color: white;
+    padding: 85px 7%;
+    text-align: center;
+}
 
-        .buttons {
-            margin-top: 25px;
-        }
+.hero h1 {
+    font-size: 44px;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.15;
+}
 
-        .button {
-            display: inline-block;
-            padding: 13px 20px;
-            margin: 5px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.hero h1 span {
+    color: #24c77a;
+}
 
-        .primary {
-            background: #0b3d2e;
-            color: white;
-        }
+.hero p {
+    max-width: 700px;
+    margin: 22px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e5f4ed;
+}
 
-        .secondary {
-            border: 2px solid #0b3d2e;
-            color: #0b3d2e;
-        }
+.buttons {
+    margin-top: 30px;
+}
 
-        .section {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.button {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
 
-        .section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.primary {
+    background: #24c77a;
+    color: #071f17;
+}
 
-        .cards {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.secondary {
+    border: 1px solid white;
+    color: white;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+.search-box {
+    background: white;
+    max-width: 1050px;
+    margin: -35px auto 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    position: relative;
+}
 
-        .card h3 {
-            margin-bottom: 12px;
-            color: #0b3d2e;
-        }
+.search-box h2 {
+    margin-bottom: 18px;
+}
 
-        .card p {
-            line-height: 1.5;
-        }
+.search-fields {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
-        footer {
-            background: #092d23;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
-    </style>
+.search-fields input,
+.search-fields select {
+    flex: 1;
+    min-width: 160px;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.search-button {
+    background: #073c2b;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 70px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #65736c;
+}
+
+.cards {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.player-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.player-photo {
+    height: 180px;
+    background: #dfe9e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+.player-info {
+    padding: 20px;
+}
+
+.player-info h3 {
+    margin-bottom: 8px;
+}
+
+.position {
+    color: #168c5a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.player-details {
+    margin-top: 14px;
+    color: #68756e;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.profile-button {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background: #073c2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.stats {
+    background: #071f17;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 45px 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.stat h2 {
+    color: #24c77a;
+    font-size: 35px;
+}
+
+.stat p {
+    margin-top: 5px;
+    color: #d8e5df;
+}
+
+.audience {
+    background: white;
+}
+
+.audience-card {
+    text-align: center;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cta {
+    background: #0b6043;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+footer {
+    background: #04150f;
+    color: white;
+    padding: 35px 7%;
+    text-align: center;
+}
+
+footer p {
+    color: #9eafa7;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .stats {
+        gap: 35px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>AFRICA TALENT FOOTBALL</h1>
-    <p>Connecting African football talents with the world</p>
-</header>
+
+<div class="logo">
+AFRICA <span>TALENT</span> FOOTBALL
+</div>
 
 <nav>
-    <a href="#">Accueil</a>
-    <a href="#">Joueurs</a>
-    <a href="#">Clubs</a>
-    <a href="#">Recruteurs</a>
-    <a href="#">À propos</a>
-    <a href="#">Contact</a>
+<a href="#">Accueil</a>
+<a href="#players">Talents</a>
+<a href="#clubs">Clubs</a>
+<a href="#recruiters">Recruteurs</a>
+<a href="#about">À propos</a>
+<a href="#register" class="nav-button">Inscrire un joueur</a>
 </nav>
+
+</header>
+
 
 <section class="hero">
 
-    <h2>Les talents africains de demain</h2>
+<h1>
+Discover Africa's next
+<span>football stars</span>
+</h1>
 
-    <p>
-        Africa Talent Football est une plateforme dédiée à la détection,
-        à la promotion et à la mise en relation des jeunes footballeurs
-        africains avec les clubs, recruteurs, agents et partenaires
-        du football international.
-    </p>
+<p>
+Africa Talent Football connecte les jeunes talents africains
+aux clubs, scouts, agents et recruteurs du football international.
+</p>
 
-    <div class="buttons">
-        <a href="#" class="button primary">Découvrir les joueurs</a>
-        <a href="#" class="button secondary">Inscrire un joueur</a>
-    </div>
+<div class="buttons">
 
-</section>
+<a href="#players" class="button primary">
+Explorer les talents
+</a>
 
-<section class="section">
+<a href="#register" class="button secondary">
+Inscrire un joueur
+</a>
 
-    <h2>Notre plateforme</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>⚽ Profils joueurs</h3>
-            <p>
-                Consultez les profils des jeunes joueurs avec leur poste,
-                âge, parcours, statistiques et vidéos.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🎥 Vidéos & performances</h3>
-            <p>
-                Les recruteurs pourront analyser les qualités techniques
-                et physiques des joueurs grâce aux vidéos.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🌍 Clubs & recruteurs</h3>
-            <p>
-                Une passerelle entre les talents africains et les clubs
-                et recruteurs à la recherche de nouveaux profils.
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<section class="section">
 
-    <h2>Une nouvelle passerelle vers le football professionnel</h2>
+<div class="search-box">
 
-    <div class="cards">
+<h2>🔎 Rechercher un talent</h2>
 
-        <div class="card">
-            <h3>Pour les joueurs</h3>
-            <p>
-                Créez votre profil et présentez votre potentiel
-                aux professionnels du football.
-            </p>
-        </div>
+<div class="search-fields">
 
-        <div class="card">
-            <h3>Pour les recruteurs</h3>
-            <p>
-                Découvrez de nouveaux talents et accédez rapidement
-                à leurs informations sportives.
-            </p>
-        </div>
+<input type="text" placeholder="Nom du joueur">
 
-        <div class="card">
-            <h3>Pour les clubs</h3>
-            <p>
-                Identifiez des joueurs correspondant à vos besoins
-                sportifs et à votre projet.
-            </p>
-        </div>
+<select>
+<option>Position</option>
+<option>Gardien</option>
+<option>Défenseur central</option>
+<option>Latéral</option>
+<option>Milieu</option>
+<option>Ailier</option>
+<option>Attaquant</option>
+</select>
 
-    </div>
+<select>
+<option>Pays</option>
+<option>Côte d'Ivoire</option>
+<option>Sénégal</option>
+<option>Cameroun</option>
+<option>Mali</option>
+<option>Ghana</option>
+<option>Nigeria</option>
+</select>
+
+<select>
+<option>Âge</option>
+<option>U16</option>
+<option>U17</option>
+<option>U18</option>
+<option>U19</option>
+<option>U21</option>
+</select>
+
+<button class="search-button">
+Rechercher
+</button>
+
+</div>
+
+</div>
+
+
+<section class="section" id="players">
+
+<div class="section-title">
+
+<h2>Talents à découvrir</h2>
+
+<p>
+Découvrez les profils de jeunes footballeurs africains.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card player-card">
+
+<div class="player-photo">
+⚽
+</div>
+
+<div class="player-info">
+
+<h3>Profil joueur</h3>
+
+<div class="position">
+MILIEU DÉFENSIF
+</div>
+
+<div class="player-details">
+
+🇨🇮 Côte d'Ivoire<br>
+🎂 18 ans<br>
+🦶 Pied droit<br>
+🏟️ Académie / Club
+
+</div>
+
+<a href="#" class="profile-button">
+Voir le profil
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card player-card">
+
+<div class="player-photo">
+⚽
+</div>
+
+<div class="player-info">
+
+<h3>Profil joueur</h3>
+
+<div class="position">
+DÉFENSEUR CENTRAL
+</div>
+
+<div class="player-details">
+
+🇨🇮 Côte d'Ivoire<br>
+🎂 19 ans<br>
+🦶 Pied droit<br>
+🏟️ Académie / Club
+
+</div>
+
+<a href="#" class="profile-button">
+Voir le profil
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card player-card">
+
+<div class="player-photo">
+⚽
+</div>
+
+<div class="player-info">
+
+<h3>Profil joueur</h3>
+
+<div class="position">
+ATTAQUANT
+</div>
+
+<div class="player-details">
+
+🇨🇮 Côte d'Ivoire<br>
+🎂 18 ans<br>
+🦶 Pied droit<br>
+🏟️ Académie / Club
+
+</div>
+
+<a href="#" class="profile-button">
+Voir le profil
+</a>
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
-<footer>
-    <p>© 2026 Africa Talent Football - Tous droits réservés.</p>
+
+<section class="stats">
+
+<div class="stat">
+<h2>0+</h2>
+<p>Joueurs</p>
+</div>
+
+<div class="stat">
+<h2>0+</h2>
+<p>Pays africains</p>
+</div>
+
+<div class="stat">
+<h2>0+</h2>
+<p>Clubs partenaires</p>
+</div>
+
+<div class="stat">
+<h2>0+</h2>
+<p>Recruteurs</p>
+</div>
+
+</section>
+
+
+<section class="section audience" id="clubs">
+
+<div class="section-title">
+
+<h2>Une plateforme pour tout l'écosystème du football</h2>
+
+<p>
+Africa Talent Football crée une passerelle entre les talents africains
+et les professionnels du football.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card audience-card">
+
+<div class="icon">⚽</div>
+
+<h3>Joueurs & Académies</h3>
+
+<p>
+Présentez vos talents avec un profil professionnel,
+des statistiques et des vidéos.
+</p>
+
+</div>
+
+
+<div class="card audience-card">
+
+<div class="icon">🔎</div>
+
+<h3>Scouts & Recruteurs</h3>
+
+<p>
+Recherchez rapidement des joueurs selon leur âge,
+leur poste, leur pays et leurs caractéristiques.
+</p>
+
+</div>
+
+
+<div class="card audience-card">
+
+<div class="icon">🏟️</div>
+
+<h3>Clubs</h3>
+
+<p>
+Identifiez de nouveaux profils et découvrez
+les talents correspondant à vos besoins.
+</p>
+
+</div>
+
+
+<div class="card audience-card">
+
+<div class="icon">🤝</div>
+
+<h3>Agents & Partenaires</h3>
+
+<p>
+Accédez à un environnement dédié à la découverte
+et au développement des jeunes joueurs.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="recruiters">
+
+<div class="section-title">
+
+<h2>Pourquoi Africa Talent Football ?</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🌍 Une vision africaine</h3>
+
+<p>
+Identifier et valoriser les talents issus des académies
+et clubs africains.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Des informations structurées</h3>
+
+<p>
+Centraliser les informations sportives essentielles
+pour faciliter l'analyse des joueurs.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚀 Une passerelle internationale</h3>
+
+<p>
+Faciliter les connexions entre les talents africains
+et le marché international.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cta" id="register">
+
+<h2>Vous représentez un talent ?</h2>
+
+<p>
+Présentez votre joueur sur Africa Talent Football
+et donnez-lui une visibilité auprès des professionnels
+du football.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="button primary">
+Inscrire un joueur
+</a>
+
+</div>
+
+</section>
+
+
+<footer id="about">
+
+<h3>AFRICA TALENT FOOTBALL</h3>
+
+<p>
+Connecting African football talents with the world.
+</p>
+
+<p>
+© 2026 Africa Talent Football. Tous droits réservés.
+</p>
+
 </footer>
 
 </body>
