@@ -3,1005 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Profil Joueur | Africa Talent Football</title>
-
+<title>Coulibaly Béré Abdoul Kader | Africa Talent Football</title>
 <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f3f6f4;
-    color: #17221b;
-}
-
-header {
-    background: #061b14;
-    color: white;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    font-size: 21px;
-    font-weight: 800;
-}
-
-.logo span {
-    color: #24c77a;
-}
-
-nav {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.hero {
-    background: linear-gradient(135deg,#063626,#08724e);
-    color: white;
-    padding: 45px 6%;
-}
-
-.player-header {
-    max-width: 1150px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    flex-wrap: wrap;
-}
-
-.player-photo {
-    width: 190px;
-    height: 225px;
-    border-radius: 12px;
-    background: #dbe8e1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 65px;
-}
-
-.player-main {
-    flex: 1;
-    min-width: 250px;
-}
-
-.player-main h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
-}
-
-.position {
-    color: #24c77a;
-    font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 17px;
-}
-
-.basic-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-}
-
-.info {
-    background: rgba(255,255,255,.12);
-    padding: 9px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-}
-
-.rating {
-    width: 120px;
-    height: 120px;
-    border: 5px solid #24c77a;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.rating strong {
-    font-size: 37px;
-}
-
-.rating span {
-    font-size: 10px;
-}
-
-.market-value {
-    min-width: 190px;
-    padding: 17px;
-    border: 1px solid rgba(255,255,255,.25);
-    background: rgba(255,255,255,.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
-.market-value strong {
-    display: block;
-    color: #24c77a;
-    font-size: 28px;
-    margin-bottom: 6px;
-}
-
-.market-value span {
-    font-size: 10px;
-}
-
-.container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 40px 18px;
-}
-
-.section {
-    background: white;
-    padding: 28px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 18px rgba(0,0,0,.06);
-}
-
-.section h2 {
-    margin-bottom: 22px;
-    font-size: 23px;
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 12px;
-}
-
-.profile-item {
-    background: #f4f7f5;
-    padding: 15px;
-    border-radius: 7px;
-}
-
-.profile-item span {
-    display: block;
-    color: #718078;
-    font-size: 12px;
-    margin-bottom: 6px;
-}
-
-.profile-item strong {
-    font-size: 14px;
-}
-
-.attributes {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 18px 35px;
-}
-
-.attribute-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 7px;
-    font-size: 14px;
-}
-
-.score {
-    font-weight: bold;
-    color: #08724e;
-}
-
-.bar {
-    height: 9px;
-    background: #e1e7e3;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.fill {
-    height: 100%;
-    background: #08724e;
-    border-radius: 20px;
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 12px;
-}
-
-.stat {
-    background: #f3f7f4;
-    padding: 20px 10px;
-    text-align: center;
-    border-radius: 8px;
-}
-
-.stat strong {
-    display: block;
-    font-size: 26px;
-    color: #063626;
-    margin-bottom: 5px;
-}
-
-.stat span {
-    color: #6b7771;
-    font-size: 12px;
-}
-
-.value-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-}
-
-.value-card {
-    background: #f3f7f4;
-    border-radius: 9px;
-    padding: 20px;
-    text-align: center;
-}
-
-.value-card strong {
-    display: block;
-    color: #08724e;
-    font-size: 25px;
-    margin-bottom: 7px;
-}
-
-.value-card span {
-    color: #69766f;
-    font-size: 12px;
-}
-
-.timeline {
-    border-left: 3px solid #24c77a;
-    padding-left: 20px;
-}
-
-.timeline-item {
-    margin-bottom: 22px;
-}
-
-.timeline-item strong {
-    color: #08724e;
-}
-
-.timeline-item p {
-    margin-top: 5px;
-    color: #5f6b65;
-}
-
-.video {
-    height: 320px;
-    background: #101713;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.video-button {
-    display: inline-block;
-    margin-top: 15px;
-    background: #24c77a;
-    color: #061b14;
-    padding: 13px 22px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.note {
-    margin-top: 18px;
-    background: #f5f7f6;
-    padding: 15px;
-    border-radius: 7px;
-    color: #69766f;
-    font-size: 12px;
-    line-height: 1.6;
-}
-
-.contact {
-    background: #063626;
-    color: white;
-    text-align: center;
-}
-
-.contact p {
-    max-width: 650px;
-    margin: 12px auto 22px;
-    color: #dcebe5;
-    line-height: 1.6;
-}
-
-.contact-button {
-    display: inline-block;
-    background: #24c77a;
-    color: #061b14;
-    padding: 14px 25px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    background: #03120d;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-footer p {
-    margin-top: 8px;
-    color: #94a69e;
-    font-size: 13px;
-}
-
-@media(max-width:750px) {
-
-    .player-header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .player-main h1 {
-        font-size: 30px;
-    }
-
-    .basic-info {
-        justify-content: center;
-    }
-
-    .rating {
-        margin: auto;
-    }
-
-    .attributes {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .stats {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .value-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media(max-width:480px) {
-
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stats {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
+:root{--green:#075b3f;--green2:#0c7a55;--dark:#071b14;--gold:#d8a62b;--light:#f3f6f4;--muted:#66736c}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:#17221b}
+header{background:var(--dark);color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:21px}.logo span{color:#27c77c}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(135deg,#063626,#08724e);color:#fff;padding:42px 6%}
+.hero-inner{max-width:1150px;margin:auto;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.player-photo{width:190px;height:230px;border-radius:14px;overflow:hidden;background:#dbe8e1;border:2px solid rgba(255,255,255,.25)}
+.player-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.player-main{flex:1;min-width:260px}.player-main h1{font-size:36px;margin:0 0 8px}.position{color:#27c77c;font-weight:800;margin-bottom:16px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{background:rgba(255,255,255,.12);padding:8px 11px;border-radius:7px;font-size:13px}
+.badge{min-width:170px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:18px;text-align:center}
+.badge strong{display:block;color:#27c77c;font-size:28px}.badge span{font-size:11px}
+.container{max-width:1150px;margin:auto;padding:38px 18px}.section{background:#fff;border-radius:12px;padding:27px;margin-bottom:22px;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.section h2{margin:0 0 20px;font-size:22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:#f4f7f5;padding:15px;border-radius:8px}.card small{display:block;color:var(--muted);margin-bottom:6px;font-size:12px}.card strong{font-size:14px}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.value{background:#f4f7f5;border-radius:10px;padding:20px;text-align:center}.value strong{display:block;color:var(--green2);font-size:26px;margin-bottom:6px}.value span{color:var(--muted);font-size:12px}
+.attributes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 35px}.attr{padding:12px 0}.attr-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}.level{font-weight:800;color:var(--green2)}.bar{height:8px;background:#e2e8e4;border-radius:10px;overflow:hidden}.fill{height:100%;background:var(--green2);border-radius:10px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:#f4f7f5;border-radius:9px;padding:17px;text-align:center}.metric strong{display:block;font-size:22px;color:#173329;margin-bottom:6px}.metric span{font-size:11px;color:var(--muted)}
+.note{background:#f5f7f6;border-left:4px solid var(--gold);padding:14px;border-radius:6px;color:#5f6b65;font-size:12px;line-height:1.6;margin-top:16px}
+.timeline{border-left:3px solid #27c77c;padding-left:20px}.timeline-item{margin-bottom:20px}.timeline-item strong{color:var(--green2)}.timeline-item p{margin:5px 0;color:var(--muted)}
+.video-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#101713}.video-wrap iframe{width:100%;height:100%;border:0}
+.contact{background:#063626;color:#fff;text-align:center}.contact p{max-width:700px;margin:10px auto 20px;color:#dcebe5;line-height:1.6}.btn{display:inline-block;background:#27c77c;color:#061b14;padding:13px 22px;border-radius:7px;text-decoration:none;font-weight:800}
+footer{background:#03120d;color:#fff;text-align:center;padding:28px}footer p{color:#94a69e;font-size:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.attributes{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.value-grid{grid-template-columns:1fr}.player-main h1{font-size:29px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.player-photo{width:150px;height:190px;margin:auto}.hero-inner{justify-content:center;text-align:center}.tags{justify-content:center}}
 </style>
 </head>
-
 <body>
-
 <header>
-
-<div class="logo">
-AFRICA <span>TALENT</span> FOOTBALL
-</div>
-
-<nav>
-<a href="index.html">Accueil</a>
-<a href="index.html#players">Talents</a>
-<a href="#">Clubs</a>
-<a href="#">Recruteurs</a>
-</nav>
-
+<div class="logo">AFRICA <span>TALENT</span> FOOTBALL</div>
+<nav><a href="index.html">Accueil</a><a href="index.html#players">Talents</a><a href="founder.html">Fondateur</a><a href="mailto:mariosemario6@gmail.com">Contact</a></nav>
 </header>
 
-
 <section class="hero">
-
-<div class="player-header">
-
-<div class="player-photo">
-⚽
-</div>
-
+<div class="hero-inner">
+<div class="player-photo"><img src="coulibaly_bere_player.jpg" alt="Coulibaly Béré Abdoul Kader"></div>
 <div class="player-main">
-
-<h1>PLAYER NAME</h1>
-
-<div class="position">
-MILIEU DÉFENSIF
+<h1>Coulibaly Béré Abdoul Kader</h1>
+<div class="position">DÉFENSEUR CENTRAL • MILIEU DÉFENSIF / BOX-TO-BOX</div>
+<div class="tags">
+<span class="tag">🇨🇮 Ivoirien</span><span class="tag">18 ans</span><span class="tag">1,91 m</span><span class="tag">75 kg</span><span class="tag">Pied droit</span>
 </div>
-
-<div class="basic-info">
-
-<div class="info">🇨🇮 Côte d'Ivoire</div>
-<div class="info">18 ans</div>
-<div class="info">1,82 m</div>
-<div class="info">Pied droit</div>
-<div class="info">Club / Académie</div>
-
 </div>
-
+<div class="badge"><strong>€120K</strong><span>VALEUR MARCHANDE ESTIMÉE</span></div>
 </div>
-
-
-<div class="rating">
-<strong>84</strong>
-<span>ATH RATING</span>
-</div>
-
-
-<div class="market-value">
-<strong>€120K</strong>
-<span>VALEUR MARCHANDE ESTIMÉE</span>
-</div>
-
-</div>
-
 </section>
-
 
 <main class="container">
-
-
 <section class="section">
-
 <h2>👤 Profil du joueur</h2>
-
-<div class="profile-grid">
-
-<div class="profile-item">
-<span>Nom complet</span>
-<strong>PLAYER NAME</strong>
+<div class="grid">
+<div class="card"><small>Nom complet</small><strong>Coulibaly Béré Abdoul Kader</strong></div>
+<div class="card"><small>Date de naissance</small><strong>28 août 2007</strong></div>
+<div class="card"><small>Nationalité</small><strong>Côte d’Ivoire</strong></div>
+<div class="card"><small>Poste prioritaire</small><strong>Défenseur central</strong></div>
+<div class="card"><small>Poste secondaire</small><strong>Milieu défensif / Box-to-Box</strong></div>
+<div class="card"><small>Pied fort</small><strong>Droit</strong></div>
+<div class="card"><small>Taille</small><strong>1,91 m</strong></div>
+<div class="card"><small>Poids</small><strong>75 kg</strong></div>
+<div class="card"><small>Expérience récente</small><strong>Club Omnisports de Korhogo — D1 ivoirienne</strong></div>
 </div>
-
-<div class="profile-item">
-<span>Date de naissance</span>
-<strong>00 / 00 / 2008</strong>
-</div>
-
-<div class="profile-item">
-<span>Nationalité</span>
-<strong>Côte d'Ivoire 🇨🇮</strong>
-</div>
-
-<div class="profile-item">
-<span>Poste principal</span>
-<strong>Milieu défensif</strong>
-</div>
-
-<div class="profile-item">
-<span>Positions secondaires</span>
-<strong>Milieu central</strong>
-</div>
-
-<div class="profile-item">
-<span>Pied fort</span>
-<strong>Droit</strong>
-</div>
-
-<div class="profile-item">
-<span>Taille</span>
-<strong>1,82 m</strong>
-</div>
-
-<div class="profile-item">
-<span>Club actuel</span>
-<strong>Club / Académie</strong>
-</div>
-
-<div class="profile-item">
-<span>Statut</span>
-<strong>Disponible / Sous contrat</strong>
-</div>
-
-</div>
-
 </section>
 
-
 <section class="section">
-
 <h2>💰 Valorisation & potentiel</h2>
-
 <div class="value-grid">
-
-<div class="value-card">
-<strong>€120K</strong>
-<span>Valeur marchande estimée</span>
+<div class="value"><strong>€120,000</strong><span>Valeur marchande indicative</span></div>
+<div class="value"><strong>18 ans</strong><span>Âge au moment du dossier</span></div>
+<div class="value"><strong>D1</strong><span>Expérience en première division ivoirienne</span></div>
 </div>
-
-<div class="value-card">
-<strong>€500K</strong>
-<span>Potentiel de valorisation</span>
-</div>
-
-<div class="value-card">
-<strong>91/100</strong>
-<span>Potentiel ATH</span>
-</div>
-
-</div>
-
-<div class="note">
-
-<strong>Important :</strong> la valeur affichée est une estimation
-indicative Africa Talent Football. Elle ne constitue pas une valeur
-officielle de transfert. Elle peut évoluer selon l'âge, les performances,
-le potentiel, le contrat, le niveau du joueur et les conditions du marché.
-
-</div>
-
+<div class="note"><strong>Important :</strong> €120,000 est une estimation indicative figurant dans le dossier de recrutement. Elle ne constitue pas une cotation officielle de Transfermarkt ni une valeur officielle de transfert. Le dossier positionne le joueur pour une évaluation/essai dans un environnement professionnel.</div>
 </section>
 
-
 <section class="section">
-
-<h2>⚽ Attributs techniques</h2>
-
+<h2>🧠 Profil technique & tactique</h2>
 <div class="attributes">
-
-<div>
-<div class="attribute-top">
-<span>Contrôle de balle</span><span class="score">86</span>
+<div class="attr"><div class="attr-top"><span>Lecture du jeu</span><span class="level">Très forte</span></div><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+<div class="attr"><div class="attr-top"><span>Récupération</span><span class="level">Très forte</span></div><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+<div class="attr"><div class="attr-top"><span>Défense 1 contre 1</span><span class="level">Forte</span></div><div class="bar"><div class="fill" style="width:82%"></div></div></div>
+<div class="attr"><div class="attr-top"><span>Relance / Réplique</span><span class="level">Forte</span></div><div class="bar"><div class="fill" style="width:82%"></div></div></div>
+<div class="attr"><div class="attr-top"><span>Mobilité</span><span class="level">Très forte</span></div><div class="bar"><div class="fill" style="width:92%"></div></div></div>
+<div class="attr"><div class="attr-top"><span>Volume de jeu</span><span class="level">Exceptionnel</span></div><div class="bar"><div class="fill" style="width:97%"></div></div></div>
 </div>
-<div class="bar"><div class="fill" style="width:86%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Dribble</span><span class="score">88</span>
-</div>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Passe courte</span><span class="score">87</span>
-</div>
-<div class="bar"><div class="fill" style="width:87%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Passe longue</span><span class="score">81</span>
-</div>
-<div class="bar"><div class="fill" style="width:81%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Technique</span><span class="score">89</span>
-</div>
-<div class="bar"><div class="fill" style="width:89%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Première touche</span><span class="score">87</span>
-</div>
-<div class="bar"><div class="fill" style="width:87%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Finition</span><span class="score">72</span>
-</div>
-<div class="bar"><div class="fill" style="width:72%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Centres</span><span class="score">78</span>
-</div>
-<div class="bar"><div class="fill" style="width:78%"></div></div>
-</div>
-
-</div>
-
+<div class="note">Les niveaux ci-dessus reprennent les qualificatifs du dossier de recrutement. Les pourcentages servent uniquement à la visualisation graphique interne et ne sont pas des mesures physiques ou statistiques officielles.</div>
 </section>
 
-
 <section class="section">
-
-<h2>🏃 Attributs physiques</h2>
-
-<div class="attributes">
-
-<div>
-<div class="attribute-top">
-<span>Vitesse</span><span class="score">91</span>
+<h2>📊 Données de performance</h2>
+<div class="metrics">
+<div class="metric"><strong>Vitesse max.</strong><span>Non communiquée</span></div>
+<div class="metric"><strong>Dribbles réussis</strong><span>Non communiqué</span></div>
+<div class="metric"><strong>Passes réussies</strong><span>Non communiqué</span></div>
+<div class="metric"><strong>Duels gagnés</strong><span>Non communiqué</span></div>
 </div>
-<div class="bar"><div class="fill" style="width:91%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Accélération</span><span class="score">93</span>
-</div>
-<div class="bar"><div class="fill" style="width:93%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Endurance</span><span class="score">88</span>
-</div>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Puissance</span><span class="score">82</span>
-</div>
-<div class="bar"><div class="fill" style="width:82%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Agilité</span><span class="score">89</span>
-</div>
-<div class="bar"><div class="fill" style="width:89%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Équilibre</span><span class="score">86</span>
-</div>
-<div class="bar"><div class="fill" style="width:86%"></div></div>
-</div>
-
-</div>
-
+<div class="note">Pour conserver une présentation professionnelle et fiable, les données chiffrées de tracking (vitesse, dribbles, passes, duels, etc.) ne sont pas inventées. Elles pourront être ajoutées dès qu’elles seront disponibles.</div>
 </section>
 
-
 <section class="section">
-
-<h2>🧠 Intelligence tactique & mental</h2>
-
-<div class="attributes">
-
-<div>
-<div class="attribute-top">
-<span>Vision du jeu</span><span class="score">85</span>
+<h2>🏃 Profil athlétique & qualités</h2>
+<div class="grid">
+<div class="card"><small>Gabarit</small><strong>1,91 m • 75 kg</strong></div>
+<div class="card"><small>Mobilité</small><strong>Très forte</strong></div>
+<div class="card"><small>Vitesse</small><strong>Très véloce et rapide</strong></div>
+<div class="card"><small>Agilité</small><strong>Très agile</strong></div>
+<div class="card"><small>Volume de jeu</small><strong>Exceptionnel</strong></div>
+<div class="card"><small>Technique</small><strong>Qualité technique mise en avant</strong></div>
 </div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Intelligence de jeu</span><span class="score">88</span>
-</div>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Prise de décision</span><span class="score">84</span>
-</div>
-<div class="bar"><div class="fill" style="width:84%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Anticipation</span><span class="score">86</span>
-</div>
-<div class="bar"><div class="fill" style="width:86%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Concentration</span><span class="score">83</span>
-</div>
-<div class="bar"><div class="fill" style="width:83%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Jeu sous pression</span><span class="score">87</span>
-</div>
-<div class="bar"><div class="fill" style="width:87%"></div></div>
-</div>
-
-</div>
-
 </section>
 
-
 <section class="section">
-
-<h2>🛡️ Attributs défensifs</h2>
-
-<div class="attributes">
-
-<div>
-<div class="attribute-top">
-<span>Tacles</span><span class="score">85</span>
-</div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Interceptions</span><span class="score">89</span>
-</div>
-<div class="bar"><div class="fill" style="width:89%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Marquage</span><span class="score">84</span>
-</div>
-<div class="bar"><div class="fill" style="width:84%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Duels</span><span class="score">86</span>
-</div>
-<div class="bar"><div class="fill" style="width:86%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Jeu aérien</span><span class="score">78</span>
-</div>
-<div class="bar"><div class="fill" style="width:78%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Récupération</span><span class="score">90</span>
-</div>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>🎯 Attributs offensifs</h2>
-
-<div class="attributes">
-
-<div>
-<div class="attribute-top">
-<span>Frappe</span><span class="score">76</span>
-</div>
-<div class="bar"><div class="fill" style="width:76%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Finition</span><span class="score">72</span>
-</div>
-<div class="bar"><div class="fill" style="width:72%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Création d'occasions</span><span class="score">84</span>
-</div>
-<div class="bar"><div class="fill" style="width:84%"></div></div>
-</div>
-
-<div>
-<div class="attribute-top">
-<span>Dernière passe</span><span class="score">82</span>
-</div>
-<div class="bar"><div class="fill" style="width:82%"></div></div>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📊 Statistiques de saison</h2>
-
-<div class="stats">
-
-<div class="stat">
-<strong>24</strong>
-<span>Matchs</span>
-</div>
-
-<div class="stat">
-<strong>1 920</strong>
-<span>Minutes</span>
-</div>
-
-<div class="stat">
-<strong>3</strong>
-<span>Buts</span>
-</div>
-
-<div class="stat">
-<strong>7</strong>
-<span>Passes décisives</span>
-</div>
-
-<div class="stat">
-<strong>87%</strong>
-<span>Passes réussies</span>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📈 Évolution de la valorisation</h2>
-
-<div class="value-grid">
-
-<div class="value-card">
-<strong>€50K</strong>
-<span>Évaluation initiale</span>
-</div>
-
-<div class="value-card">
-<strong>€75K</strong>
-<span>Évaluation précédente</span>
-</div>
-
-<div class="value-card">
-<strong>€120K</strong>
-<span>Évaluation actuelle</span>
-</div>
-
-</div>
-
-<div class="note">
-Dernière mise à jour : Août 2026
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📋 Parcours du joueur</h2>
-
+<h2>📋 Parcours sportif</h2>
 <div class="timeline">
-
-<div class="timeline-item">
-<strong>2026 — Club actuel</strong>
-<p>Club / Académie</p>
+<div class="timeline-item"><strong>2022 — 2023</strong><p>Alliance Football Club de l’Indénié — D3 ivoirienne</p></div>
+<div class="timeline-item"><strong>2023 — 2026</strong><p>Club Omnisports de Korhogo — D1 ivoirienne</p></div>
 </div>
-
-<div class="timeline-item">
-<strong>2024 — 2026</strong>
-<p>Ancien club / Académie</p>
-</div>
-
-<div class="timeline-item">
-<strong>Formation</strong>
-<p>Centre de formation</p>
-</div>
-
-</div>
-
 </section>
-
 
 <section class="section">
-
-<h2>🎥 Vidéo & analyse</h2>
-
-<div class="video">
-
-<div>
-
-<h3>Highlights & Match Analysis</h3>
-
-<a href="#" class="video-button">
-▶ Voir les vidéos
-</a>
-
+<h2>🌍 Ce qui peut intéresser un recruteur</h2>
+<div class="grid">
+<div class="card"><small>Défense</small><strong>Interventions propres, intelligence de placement et protection de l’axe.</strong></div>
+<div class="card"><small>Récupération</small><strong>Capacité à gagner des ballons et à lancer immédiatement la possession.</strong></div>
+<div class="card"><small>Relance</small><strong>Vision, disponibilité et qualité technique pour jouer vers l’avant.</strong></div>
+<div class="card"><small>Mobilité</small><strong>Capacité à défendre l’espace malgré son gabarit.</strong></div>
+<div class="card"><small>Polyvalence</small><strong>Défenseur central ou milieu défensif / Box-to-Box.</strong></div>
+<div class="card"><small>Projection</small><strong>Jeune profil perfectible avec une marge de progression importante.</strong></div>
 </div>
-
-</div>
-
 </section>
-
 
 <section class="section">
-
-<h2>🔬 Données & méthodologie</h2>
-
-<div class="note">
-
-<strong>Données mesurées :</strong> statistiques de match,
-minutes jouées, buts, passes, vitesse maximale et autres données
-de performance lorsqu'elles sont disponibles.
-
-<br><br>
-
-<strong>Évaluation scouting :</strong> les notes techniques,
-physiques, tactiques et mentales sont des évaluations réalisées
-à partir des informations et observations disponibles.
-
-<br><br>
-
-<strong>ATH Rating :</strong> indicateur interne Africa Talent Football
-destiné à faciliter la lecture globale du profil. Il ne constitue
-pas une note officielle d'une fédération ou d'un organisme tiers.
-
+<h2>🎥 Highlights & analyse vidéo</h2>
+<div class="video-wrap">
+<iframe src="https://www.youtube-nocookie.com/embed/f8pWDJsgKb4" title="Coulibaly Béré Abdoul Kader — Highlights" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-
+<div class="note">Vidéo fournie dans le dossier du joueur. L’intégration utilise le lecteur YouTube intégré, conformément aux possibilités d’embed de YouTube. urlDocumentation YouTube sur l’intégration des vidéosturn0search0</div>
 </section>
 
+<section class="section">
+<h2>🎯 Projection recrutement</h2>
+<div class="grid">
+<div class="card"><small>Immédiat</small><strong>Évaluation / essai dans un environnement professionnel exigeant.</strong></div>
+<div class="card"><small>Court terme</small><strong>Intégration, stabilisation à un poste et développement tactique.</strong></div>
+<div class="card"><small>Moyen terme</small><strong>Progression sportive et exposition internationale.</strong></div>
+</div>
+<div class="note">Message aux recruteurs : le dossier recommande une évaluation directe sur le terrain ou sur vidéo afin de mesurer le potentiel dans un contexte de haut niveau.</div>
+</section>
+
+<section class="section">
+<h2>🌐 Langues</h2>
+<div class="grid">
+<div class="card"><small>Français</small><strong>Parlé, lu et écrit</strong></div>
+<div class="card"><small>Anglais</small><strong>Niveau académique</strong></div>
+</div>
+</section>
 
 <section class="section contact">
-
 <h2>🔎 Intéressé par ce joueur ?</h2>
-
-<p>
-Les clubs, scouts, recruteurs et agents peuvent contacter
-Africa Talent Football pour obtenir davantage d'informations
-sur ce profil.
-</p>
-
-<a href="mailto:contact@africatalentfootball.com"
-class="contact-button">
-Contacter Africa Talent Football
-</a>
-
+<p>Clubs, scouts, agents et directeurs sportifs peuvent contacter Africa Talent Football pour obtenir davantage d’informations ou organiser une évaluation du profil.</p>
+<a class="btn" href="mailto:mariosemario6@gmail.com?subject=Intérêt%20pour%20Coulibaly%20Béré%20Abdoul%20Kader">Contacter Africa Talent Football</a>
 </section>
-
-
 </main>
 
-
 <footer>
-
 <h3>AFRICA TALENT FOOTBALL</h3>
-
-<p>
-Professional African Football Talent Scouting Platform
-</p>
-
-<p>
-© 2026 Africa Talent Football — Tous droits réservés.
-</p>
-
+<p>Professional African Football Talent Scouting Platform</p>
+<p>© 2026 Africa Talent Football</p>
 </footer>
-
 </body>
 </html>
