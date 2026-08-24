@@ -16,23 +16,24 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f2f5f3;
+    background: #f3f6f4;
     color: #17221b;
 }
 
 header {
-    background: #071f17;
+    background: #061b14;
     color: white;
-    padding: 18px 7%;
+    padding: 18px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .logo span {
@@ -42,7 +43,7 @@ header {
 nav {
     display: flex;
     gap: 18px;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -52,35 +53,34 @@ nav a {
 }
 
 .hero {
-    background: linear-gradient(135deg, #073c2b, #0b6043);
+    background: linear-gradient(135deg,#063626,#08724e);
     color: white;
-    padding: 45px 7%;
+    padding: 45px 6%;
 }
 
 .player-header {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
     display: flex;
-    gap: 35px;
     align-items: center;
+    gap: 28px;
     flex-wrap: wrap;
 }
 
 .player-photo {
     width: 190px;
-    height: 220px;
-    background: #dce8e2;
+    height: 225px;
     border-radius: 12px;
+    background: #dbe8e1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 70px;
-    color: #073c2b;
+    font-size: 65px;
 }
 
 .player-main {
     flex: 1;
-    min-width: 260px;
+    min-width: 250px;
 }
 
 .player-main h1 {
@@ -92,25 +92,25 @@ nav a {
     color: #24c77a;
     font-weight: bold;
     font-size: 17px;
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
 
 .basic-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 9px;
 }
 
 .info {
-    background: rgba(255,255,255,0.12);
-    padding: 9px 13px;
+    background: rgba(255,255,255,.12);
+    padding: 9px 12px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .rating {
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
     border: 5px solid #24c77a;
     border-radius: 50%;
     display: flex;
@@ -120,40 +120,79 @@ nav a {
 }
 
 .rating strong {
-    font-size: 38px;
+    font-size: 37px;
 }
 
 .rating span {
-    font-size: 12px;
+    font-size: 10px;
+}
+
+.market-value {
+    min-width: 190px;
+    padding: 17px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.market-value strong {
+    display: block;
+    color: #24c77a;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.market-value span {
+    font-size: 10px;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
-    padding: 45px 20px;
+    padding: 40px 18px;
 }
 
 .section {
     background: white;
     padding: 28px;
-    margin-bottom: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
 }
 
 .section h2 {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     font-size: 23px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+}
+
+.profile-item {
+    background: #f4f7f5;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.profile-item span {
+    display: block;
+    color: #718078;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.profile-item strong {
+    font-size: 14px;
 }
 
 .attributes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     gap: 18px 35px;
-}
-
-.attribute {
-    margin-bottom: 5px;
 }
 
 .attribute-top {
@@ -163,154 +202,204 @@ nav a {
     font-size: 14px;
 }
 
+.score {
+    font-weight: bold;
+    color: #08724e;
+}
+
 .bar {
     height: 9px;
     background: #e1e7e3;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
 .fill {
     height: 100%;
-    background: #0b6043;
-    border-radius: 10px;
-}
-
-.score {
-    font-weight: bold;
-    color: #0b6043;
+    background: #08724e;
+    border-radius: 20px;
 }
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(5,1fr);
+    gap: 12px;
 }
 
 .stat {
     background: #f3f7f4;
-    padding: 20px;
+    padding: 20px 10px;
     text-align: center;
     border-radius: 8px;
 }
 
 .stat strong {
     display: block;
-    font-size: 27px;
-    color: #073c2b;
+    font-size: 26px;
+    color: #063626;
     margin-bottom: 5px;
 }
 
 .stat span {
-    color: #68756e;
-    font-size: 13px;
+    color: #6b7771;
+    font-size: 12px;
 }
 
-.profile-grid {
+.value-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 15px;
 }
 
-.profile-item {
-    padding: 14px;
-    background: #f5f7f6;
-    border-radius: 7px;
+.value-card {
+    background: #f3f7f4;
+    border-radius: 9px;
+    padding: 20px;
+    text-align: center;
 }
 
-.profile-item span {
+.value-card strong {
     display: block;
+    color: #08724e;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.value-card span {
     color: #69766f;
     font-size: 12px;
-    margin-bottom: 5px;
+}
+
+.timeline {
+    border-left: 3px solid #24c77a;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 22px;
+}
+
+.timeline-item strong {
+    color: #08724e;
+}
+
+.timeline-item p {
+    margin-top: 5px;
+    color: #5f6b65;
 }
 
 .video {
-    background: #101914;
-    height: 330px;
+    height: 320px;
+    background: #101713;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
+    color: white;
 }
 
 .video-button {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 20px;
     background: #24c77a;
-    color: #071f17;
-    border-radius: 6px;
+    color: #061b14;
+    padding: 13px 22px;
+    border-radius: 7px;
     text-decoration: none;
     font-weight: bold;
 }
 
+.note {
+    margin-top: 18px;
+    background: #f5f7f6;
+    padding: 15px;
+    border-radius: 7px;
+    color: #69766f;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
 .contact {
-    background: #073c2b;
+    background: #063626;
     color: white;
     text-align: center;
 }
 
 .contact p {
+    max-width: 650px;
     margin: 12px auto 22px;
-    max-width: 600px;
-    color: #dbece5;
+    color: #dcebe5;
+    line-height: 1.6;
 }
 
 .contact-button {
     display: inline-block;
     background: #24c77a;
-    color: #071f17;
-    padding: 14px 24px;
+    color: #061b14;
+    padding: 14px 25px;
     border-radius: 7px;
     text-decoration: none;
     font-weight: bold;
 }
 
 footer {
-    background: #04150f;
+    background: #03120d;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px;
 }
 
 footer p {
-    color: #9eafa7;
     margin-top: 8px;
+    color: #94a69e;
     font-size: 13px;
 }
 
-@media(max-width: 700px) {
-
-    .player-main h1 {
-        font-size: 30px;
-    }
+@media(max-width:750px) {
 
     .player-header {
         justify-content: center;
         text-align: center;
     }
 
+    .player-main h1 {
+        font-size: 30px;
+    }
+
     .basic-info {
         justify-content: center;
+    }
+
+    .rating {
+        margin: auto;
     }
 
     .attributes {
         grid-template-columns: 1fr;
     }
 
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
+    .profile-grid {
+        grid-template-columns: 1fr 1fr;
     }
+
+    .stats {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:480px) {
 
     .profile-grid {
         grid-template-columns: 1fr;
     }
 
-    .rating {
-        margin: auto;
+    .stats {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -328,8 +417,8 @@ AFRICA <span>TALENT</span> FOOTBALL
 <nav>
 <a href="index.html">Accueil</a>
 <a href="index.html#players">Talents</a>
-<a href="#">Recruteurs</a>
 <a href="#">Clubs</a>
+<a href="#">Recruteurs</a>
 </nav>
 
 </header>
@@ -354,14 +443,10 @@ MILIEU DÉFENSIF
 <div class="basic-info">
 
 <div class="info">🇨🇮 Côte d'Ivoire</div>
-
-<div class="info">🎂 18 ans</div>
-
-<div class="info">🦶 Pied droit</div>
-
-<div class="info">📏 1,82 m</div>
-
-<div class="info">🏟️ Club / Académie</div>
+<div class="info">18 ans</div>
+<div class="info">1,82 m</div>
+<div class="info">Pied droit</div>
+<div class="info">Club / Académie</div>
 
 </div>
 
@@ -369,11 +454,14 @@ MILIEU DÉFENSIF
 
 
 <div class="rating">
-
 <strong>84</strong>
-
 <span>ATH RATING</span>
+</div>
 
+
+<div class="market-value">
+<strong>€120K</strong>
+<span>VALEUR MARCHANDE ESTIMÉE</span>
 </div>
 
 </div>
@@ -386,7 +474,7 @@ MILIEU DÉFENSIF
 
 <section class="section">
 
-<h2>👤 Informations du joueur</h2>
+<h2>👤 Profil du joueur</h2>
 
 <div class="profile-grid">
 
@@ -430,6 +518,46 @@ MILIEU DÉFENSIF
 <strong>Club / Académie</strong>
 </div>
 
+<div class="profile-item">
+<span>Statut</span>
+<strong>Disponible / Sous contrat</strong>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>💰 Valorisation & potentiel</h2>
+
+<div class="value-grid">
+
+<div class="value-card">
+<strong>€120K</strong>
+<span>Valeur marchande estimée</span>
+</div>
+
+<div class="value-card">
+<strong>€500K</strong>
+<span>Potentiel de valorisation</span>
+</div>
+
+<div class="value-card">
+<strong>91/100</strong>
+<span>Potentiel ATH</span>
+</div>
+
+</div>
+
+<div class="note">
+
+<strong>Important :</strong> la valeur affichée est une estimation
+indicative Africa Talent Football. Elle ne constitue pas une valeur
+officielle de transfert. Elle peut évoluer selon l'âge, les performances,
+le potentiel, le contrat, le niveau du joueur et les conditions du marché.
+
 </div>
 
 </section>
@@ -441,66 +569,58 @@ MILIEU DÉFENSIF
 
 <div class="attributes">
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Contrôle de balle</span>
-<span class="score">86</span>
+<span>Contrôle de balle</span><span class="score">86</span>
 </div>
 <div class="bar"><div class="fill" style="width:86%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Dribble</span>
-<span class="score">88</span>
+<span>Dribble</span><span class="score">88</span>
 </div>
 <div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Passe courte</span>
-<span class="score">87</span>
+<span>Passe courte</span><span class="score">87</span>
 </div>
 <div class="bar"><div class="fill" style="width:87%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Passe longue</span>
-<span class="score">81</span>
+<span>Passe longue</span><span class="score">81</span>
 </div>
 <div class="bar"><div class="fill" style="width:81%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Technique</span>
-<span class="score">89</span>
+<span>Technique</span><span class="score">89</span>
 </div>
 <div class="bar"><div class="fill" style="width:89%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Première touche</span>
-<span class="score">87</span>
+<span>Première touche</span><span class="score">87</span>
 </div>
 <div class="bar"><div class="fill" style="width:87%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Finition</span>
-<span class="score">72</span>
+<span>Finition</span><span class="score">72</span>
 </div>
 <div class="bar"><div class="fill" style="width:72%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Centres</span>
-<span class="score">78</span>
+<span>Centres</span><span class="score">78</span>
 </div>
 <div class="bar"><div class="fill" style="width:78%"></div></div>
 </div>
@@ -516,50 +636,44 @@ MILIEU DÉFENSIF
 
 <div class="attributes">
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Vitesse</span>
-<span class="score">91</span>
+<span>Vitesse</span><span class="score">91</span>
 </div>
 <div class="bar"><div class="fill" style="width:91%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Accélération</span>
-<span class="score">93</span>
+<span>Accélération</span><span class="score">93</span>
 </div>
 <div class="bar"><div class="fill" style="width:93%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Endurance</span>
-<span class="score">88</span>
+<span>Endurance</span><span class="score">88</span>
 </div>
 <div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Puissance</span>
-<span class="score">82</span>
+<span>Puissance</span><span class="score">82</span>
 </div>
 <div class="bar"><div class="fill" style="width:82%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Agilité</span>
-<span class="score">89</span>
+<span>Agilité</span><span class="score">89</span>
 </div>
 <div class="bar"><div class="fill" style="width:89%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Équilibre</span>
-<span class="score">86</span>
+<span>Équilibre</span><span class="score">86</span>
 </div>
 <div class="bar"><div class="fill" style="width:86%"></div></div>
 </div>
@@ -571,54 +685,48 @@ MILIEU DÉFENSIF
 
 <section class="section">
 
-<h2>🧠 Attributs tactiques & mentaux</h2>
+<h2>🧠 Intelligence tactique & mental</h2>
 
 <div class="attributes">
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Vision du jeu</span>
-<span class="score">85</span>
+<span>Vision du jeu</span><span class="score">85</span>
 </div>
 <div class="bar"><div class="fill" style="width:85%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Intelligence de jeu</span>
-<span class="score">88</span>
+<span>Intelligence de jeu</span><span class="score">88</span>
 </div>
 <div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Prise de décision</span>
-<span class="score">84</span>
+<span>Prise de décision</span><span class="score">84</span>
 </div>
 <div class="bar"><div class="fill" style="width:84%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Anticipation</span>
-<span class="score">86</span>
+<span>Anticipation</span><span class="score">86</span>
 </div>
 <div class="bar"><div class="fill" style="width:86%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Concentration</span>
-<span class="score">83</span>
+<span>Concentration</span><span class="score">83</span>
 </div>
 <div class="bar"><div class="fill" style="width:83%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Jeu sous pression</span>
-<span class="score">87</span>
+<span>Jeu sous pression</span><span class="score">87</span>
 </div>
 <div class="bar"><div class="fill" style="width:87%"></div></div>
 </div>
@@ -634,52 +742,85 @@ MILIEU DÉFENSIF
 
 <div class="attributes">
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Tacles</span>
-<span class="score">85</span>
+<span>Tacles</span><span class="score">85</span>
 </div>
 <div class="bar"><div class="fill" style="width:85%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Interceptions</span>
-<span class="score">89</span>
+<span>Interceptions</span><span class="score">89</span>
 </div>
 <div class="bar"><div class="fill" style="width:89%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Marquage</span>
-<span class="score">84</span>
+<span>Marquage</span><span class="score">84</span>
 </div>
 <div class="bar"><div class="fill" style="width:84%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Duels</span>
-<span class="score">86</span>
+<span>Duels</span><span class="score">86</span>
 </div>
 <div class="bar"><div class="fill" style="width:86%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Jeu aérien</span>
-<span class="score">78</span>
+<span>Jeu aérien</span><span class="score">78</span>
 </div>
 <div class="bar"><div class="fill" style="width:78%"></div></div>
 </div>
 
-<div class="attribute">
+<div>
 <div class="attribute-top">
-<span>Récupération</span>
-<span class="score">90</span>
+<span>Récupération</span><span class="score">90</span>
 </div>
 <div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🎯 Attributs offensifs</h2>
+
+<div class="attributes">
+
+<div>
+<div class="attribute-top">
+<span>Frappe</span><span class="score">76</span>
+</div>
+<div class="bar"><div class="fill" style="width:76%"></div></div>
+</div>
+
+<div>
+<div class="attribute-top">
+<span>Finition</span><span class="score">72</span>
+</div>
+<div class="bar"><div class="fill" style="width:72%"></div></div>
+</div>
+
+<div>
+<div class="attribute-top">
+<span>Création d'occasions</span><span class="score">84</span>
+</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div>
+<div class="attribute-top">
+<span>Dernière passe</span><span class="score">82</span>
+</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
 </div>
 
 </div>
@@ -713,6 +854,11 @@ MILIEU DÉFENSIF
 <span>Passes décisives</span>
 </div>
 
+<div class="stat">
+<strong>87%</strong>
+<span>Passes réussies</span>
+</div>
+
 </div>
 
 </section>
@@ -720,7 +866,63 @@ MILIEU DÉFENSIF
 
 <section class="section">
 
-<h2>🎥 Vidéo du joueur</h2>
+<h2>📈 Évolution de la valorisation</h2>
+
+<div class="value-grid">
+
+<div class="value-card">
+<strong>€50K</strong>
+<span>Évaluation initiale</span>
+</div>
+
+<div class="value-card">
+<strong>€75K</strong>
+<span>Évaluation précédente</span>
+</div>
+
+<div class="value-card">
+<strong>€120K</strong>
+<span>Évaluation actuelle</span>
+</div>
+
+</div>
+
+<div class="note">
+Dernière mise à jour : Août 2026
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>📋 Parcours du joueur</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>2026 — Club actuel</strong>
+<p>Club / Académie</p>
+</div>
+
+<div class="timeline-item">
+<strong>2024 — 2026</strong>
+<p>Ancien club / Académie</p>
+</div>
+
+<div class="timeline-item">
+<strong>Formation</strong>
+<p>Centre de formation</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🎥 Vidéo & analyse</h2>
 
 <div class="video">
 
@@ -729,10 +931,37 @@ MILIEU DÉFENSIF
 <h3>Highlights & Match Analysis</h3>
 
 <a href="#" class="video-button">
-▶️ Voir la vidéo
+▶ Voir les vidéos
 </a>
 
 </div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🔬 Données & méthodologie</h2>
+
+<div class="note">
+
+<strong>Données mesurées :</strong> statistiques de match,
+minutes jouées, buts, passes, vitesse maximale et autres données
+de performance lorsqu'elles sont disponibles.
+
+<br><br>
+
+<strong>Évaluation scouting :</strong> les notes techniques,
+physiques, tactiques et mentales sont des évaluations réalisées
+à partir des informations et observations disponibles.
+
+<br><br>
+
+<strong>ATH Rating :</strong> indicateur interne Africa Talent Football
+destiné à faciliter la lecture globale du profil. Il ne constitue
+pas une note officielle d'une fédération ou d'un organisme tiers.
 
 </div>
 
@@ -744,8 +973,9 @@ MILIEU DÉFENSIF
 <h2>🔎 Intéressé par ce joueur ?</h2>
 
 <p>
-Les clubs, scouts et recruteurs peuvent demander
-des informations complémentaires sur ce profil.
+Les clubs, scouts, recruteurs et agents peuvent contacter
+Africa Talent Football pour obtenir davantage d'informations
+sur ce profil.
 </p>
 
 <a href="mailto:contact@africatalentfootball.com"
@@ -768,7 +998,7 @@ Professional African Football Talent Scouting Platform
 </p>
 
 <p>
-© 2026 Africa Talent Football. Tous droits réservés.
+© 2026 Africa Talent Football — Tous droits réservés.
 </p>
 
 </footer>
