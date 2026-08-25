@@ -1,1 +1,42 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inscription | Africa Talent Football</title><link rel="icon" href="logo.svg"><link rel="stylesheet" href="styles.css"></head><body><header class="header"><div class="container"><a class="brand" href="index.html"><img src="logo.svg"><span>AFRICA <b>TALENT</b> FOOTBALL</span></a><nav class="nav"><a href="index.html">Accueil</a><a href="player.html">Talents</a><a href="network.html">Réseau</a><a href="founder.html">Fondateur</a></nav><select class="lang" data-lang><option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="it">IT</option><option value="pt">PT</option><option value="de">DE</option></select><button class="menu">☰</button></div></header><section class="page-hero"><div class="container"><div class="eyebrow">JOIN THE NETWORK</div><h1>Créer votre profil professionnel</h1><p>Choisissez votre type de compte. Cette première version prépare l'expérience d'inscription ; la création de comptes sera connectée au backend lors de la prochaine étape.</p></div></section><main class="section"><div class="container form-wrap"><div class="card"><h2 style="margin-top:0">Je suis…</h2><div class="role-select"><label><input type="radio" name="role" checked><span>⚽<br>Joueur</span></label><label><input type="radio" name="role"><span>🏟️<br>Club</span></label><label><input type="radio" name="role"><span>🤝<br>Agent</span></label><label><input type="radio" name="role"><span>🔎<br>Scout</span></label></div><form onsubmit="event.preventDefault();alert('Votre formulaire est prêt. La création de compte sera activée avec le backend sécurisé.');" style="margin-top:25px"><div class="form-grid"><div class="field"><label>Nom complet</label><input required placeholder="Votre nom"></div><div class="field"><label>Email professionnel</label><input type="email" required placeholder="vous@exemple.com"></div><div class="field"><label>Pays</label><select><option>Côte d’Ivoire</option><option>France</option><option>Angleterre</option><option>Espagne</option><option>Italie</option><option>Portugal</option><option>Allemagne</option><option>Autre</option></select></div><div class="field"><label>Langue préférée</label><select data-lang><option value="fr">Français</option><option value="en">English</option><option value="es">Español</option><option value="it">Italiano</option><option value="pt">Português</option><option value="de">Deutsch</option></select></div><div class="field full"><label>Présentation</label><textarea placeholder="Présentez brièvement votre profil ou votre structure..."></textarea></div><div class="field full"><button class="btn btn-primary" type="submit">Créer mon profil</button></div></div></form></div><div class="notice" style="margin-top:16px"><strong>Important pour le lancement mondial :</strong> si des mineurs s'inscrivent, la plateforme devra prévoir des règles spécifiques de consentement, protection des données et contrôle des échanges. Les fonctions de messagerie et de mise en relation doivent être sécurisées avant une ouverture publique complète.</div></div></main><footer class="footer"><div class="container"><div class="copy">© 2026 Africa Talent Football</div></div></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Créer un profil professionnel sur Africa Talent Football.">
+<title>Créer un compte | Africa Talent Football</title>
+<link rel="icon" href="logo.svg"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header"><div class="container"><a class="brand" href="index.html"><img src="logo.svg" alt="Africa Talent Football"><span>AFRICA <b>TALENT</b> FOOTBALL</span></a>
+<nav class="nav" id="site-navigation"><a href="index.html">Accueil</a><a href="player.html">Talents</a><a href="network.html">Réseau</a><a href="founder.html">Fondateur</a><a href="register.html">Inscription</a><a href="login.html">Connexion</a></nav>
+<select class="lang" data-lang aria-label="Language"><option value="fr">FR</option><option value="en">EN</option><option value="es">ES</option><option value="it">IT</option><option value="pt">PT</option><option value="de">DE</option></select>
+<button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-navigation">☰</button></div></header>
+<section class="page-hero"><div class="container"><div class="eyebrow">JOIN THE GLOBAL NETWORK</div><h1>Créer votre identité footballistique</h1><p>Construisez un profil professionnel destiné aux joueurs, clubs, agents et scouts du monde entier.</p></div></section>
+<main class="section"><div class="container form-wrap">
+<div class="card">
+<div class="form-intro"><span class="status-dot"></span><div><strong>Inscription internationale</strong><p>Étape 1 — informations de base</p></div></div>
+<h2 style="margin-top:22px">Je suis…</h2>
+<div class="role-select">
+<label><input type="radio" name="role" value="player" checked><span>⚽<br>Joueur</span></label>
+<label><input type="radio" name="role" value="club"><span>🏟️<br>Club</span></label>
+<label><input type="radio" name="role" value="agent"><span>🤝<br>Agent</span></label>
+<label><input type="radio" name="role" value="scout"><span>🔎<br>Scout</span></label>
+</div>
+<form id="register-form" style="margin-top:25px">
+<div class="form-grid">
+<div class="field"><label for="fullName">Nom complet / Nom de la structure</label><input id="fullName" name="fullName" required autocomplete="name" placeholder="Ex. Jean Dupont"></div>
+<div class="field"><label for="email">Email professionnel</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="vous@exemple.com"></div>
+<div class="field"><label for="country">Pays</label><select id="country" name="country" data-countries required><option value="">Sélectionner un pays…</option></select></div>
+<div class="field"><label for="city">Ville</label><input id="city" name="city" autocomplete="address-level2" placeholder="Abidjan, Paris, Madrid…"></div>
+<div class="field"><label for="password">Mot de passe</label><input id="password" name="password" type="password" minlength="8" required autocomplete="new-password" placeholder="8 caractères minimum"></div>
+<div class="field"><label for="passwordConfirm">Confirmer le mot de passe</label><input id="passwordConfirm" name="passwordConfirm" type="password" minlength="8" required autocomplete="new-password" placeholder="Répéter le mot de passe"></div>
+<div class="field full"><label for="presentation">Présentation professionnelle</label><textarea id="presentation" name="presentation" placeholder="Poste, club, expérience, spécialité, objectifs…"></textarea></div>
+<div class="field full"><label class="consent"><input type="checkbox" id="consent" required> <span>J’accepte que les informations de mon profil soient utilisées pour créer ma présence sur Africa Talent Football.</span></label></div>
+<div class="field full"><button class="btn btn-primary btn-large" type="submit">Créer mon compte →</button></div>
+</div></form>
+<div id="register-message" class="form-message" role="status" aria-live="polite"></div>
+</div>
+<div class="security-panel"><strong>🔐 Sécurité & lancement</strong><p>Cette version GitHub Pages prépare l'expérience et peut mémoriser une démonstration localement sur votre appareil. Pour un lancement mondial, les comptes, mots de passe, documents, messagerie et données des joueurs doivent être reliés à un backend sécurisé avec authentification et base de données.</p></div>
+</div></main>
+<footer class="footer"><div class="container"><div class="copy">© 2026 Africa Talent Football — Global Football Talent Network.</div></div></footer>
+<script src="app.js"></script></body></html>
