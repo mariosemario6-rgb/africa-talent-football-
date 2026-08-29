@@ -66,7 +66,28 @@
 @media(max-width:420px){
   .lang{display:none}.brand span{font-size:11px}.menu{font-size:23px}
 }
+/* V4 — navigation toujours visible */
+#site-navigation.v4-nav {
+  display: flex !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  transform: none !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
 
+#site-navigation.v4-nav a {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 /* ===== V4 GLOBAL NAVIGATION ===== */
 .v4-nav{display:flex!important;position:static!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end;flex-wrap:wrap;gap:10px;}
 .v4-nav a{white-space:nowrap;}
